@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"cd micro-front-end-activate; yarn dev \" \"cd micro-front-end-main; yarn dev\" \"cd micro-front-end-shell; yarn dev \"",
+    "build": "concurrently \"cd micro-front-end-activate; yarn build \" \"cd micro-front-end-main; yarn build\" \"cd micro-front-end-shell; yarn build \"",
+    "serve": "concurrently \"cd micro-front-end-activate; yarn start \" \"cd micro-front-end-main; yarn start\" \"cd micro-front-end-shell; yarn start \"",
+    "postinstall": "concurrently \"cd micro-front-end-activate; yarn\" \"cd micro-front-end-main; yarn\" \"cd micro-front-end-shell; yarn\""
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
